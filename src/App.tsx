@@ -8,7 +8,7 @@ const App = () => {
         <Text>Hello World!</Text>
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 export default App;
