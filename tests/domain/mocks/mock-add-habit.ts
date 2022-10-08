@@ -1,7 +1,7 @@
 import { AddHabit } from '../../../src/domain/usecases/add-habit';
+import { mockHabitModel } from './mock-habit';
 
 import { faker } from '@faker-js/faker';
-import { mockHabitModel } from './mock-habit';
 
 export const mockAddHabitParams = (): AddHabit.Params => ({
   title: faker.random.words(),
