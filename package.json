@@ -6,14 +6,18 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm test -- --watch",
+    "test:staged": "npm test -- --watch --findRelatedTests",
+    "test:ci": "npm test -- --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "react": "18.1.0",
-    "react-native": "0.70.2"
+    "react-native": "0.70.2",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -27,10 +31,12 @@
     "@typescript-eslint/parser": "^5.37.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
     "git-commit-msg-linter": "^4.2.1",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "0.72.3",
     "react-test-renderer": "18.1.0",
+    "ts-jest": "^29.0.3",
     "typescript": "^4.8.3"
   },
   "jest": {
