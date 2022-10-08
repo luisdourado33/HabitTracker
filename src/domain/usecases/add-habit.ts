@@ -6,8 +6,8 @@ export interface AddHabit {
 
 export namespace AddHabit {
   export type Params = {
-    title: String;
-    goal: String;
+    title: string;
+    goal: string;
     deadline: Date;
     isCompleted: boolean;
   };

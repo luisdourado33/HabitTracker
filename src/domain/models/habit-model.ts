@@ -1,6 +1,6 @@
 export type HabitModel = {
-  title: String;
-  goal: String;
+  title: string;
+  goal: string;
   deadline: Date;
   isCompleted: boolean;
 };
