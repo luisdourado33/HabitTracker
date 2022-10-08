@@ -1,3 +1,3 @@
 export interface SetStorage {
-  set: (key: String, value: any) => void;
+  set: (key: string, value: any) => Promise<any>;
 }
