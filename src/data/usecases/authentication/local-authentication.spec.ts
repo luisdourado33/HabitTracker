@@ -1,13 +1,15 @@
 import { LocalStorageGetClientSpy } from '../../test/mock-local-storage-client';
 import { LocalAuthentication } from './local-authentication';
 
+import { faker } from '@faker-js/faker';
+
 type SutTypes = {
   sut: LocalAuthentication;
   localGetClientSpy: LocalStorageGetClientSpy;
 };
 
 // factory
-const makeSut = (key: string = '@any_key'): SutTypes => {
+const makeSut = (key: string = faker.random.word()): SutTypes => {
   const localGetClientSpy = new LocalStorageGetClientSpy();
   const sut = new LocalAuthentication(key, localGetClientSpy);
 
