@@ -2,7 +2,14 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
   "compilerOptions": {
+    "module": "esnext",
+    "esModuleInterop": true,
     "jsx": "react",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Completeness */
