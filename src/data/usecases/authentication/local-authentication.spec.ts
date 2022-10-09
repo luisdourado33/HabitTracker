@@ -17,7 +17,7 @@ const makeSut = (key: string = faker.random.word()): SutTypes => {
 };
 
 describe('LocalAuthentication', () => {
-  test('Should call LocalStorageClient with a specific key', async () => {
+  test('Should call LocalStorageGetClient with a specific key', async () => {
     const key = '@user_email';
     const { sut, localGetClientSpy } = makeSut(key);
     await sut.auth();
