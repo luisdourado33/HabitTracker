@@ -1,10 +1,13 @@
-import { LocalStorageGetClient } from '../protocols/cache/local-storage-get-client';
+import {
+  LocalStorageGetClient,
+  LocalStorageParams,
+} from '../protocols/cache/local-storage-get-client';
 
 export class LocalStorageGetClientSpy implements LocalStorageGetClient {
   key?: string;
-  async get(key: string): Promise<void> {
-    this.key = key;
 
+  async get(params: LocalStorageParams): Promise<any> {
+    this.key = params.key;
     return Promise.resolve();
   }
 }

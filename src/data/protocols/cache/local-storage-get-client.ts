@@ -1,3 +1,8 @@
+export type LocalStorageParams = {
+  key: string;
+  value?: any;
+};
+
 export interface LocalStorageGetClient {
-  get(key: string): Promise<void>;
+  get(params: LocalStorageParams): Promise<any>;
 }
