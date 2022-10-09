@@ -7,6 +7,6 @@ export class LocalAuthentication {
   ) {}
 
   async auth(): Promise<void> {
-    await this.localClient.get(this.key);
+    await this.localClient.get({ key: this.key });
   }
 }
