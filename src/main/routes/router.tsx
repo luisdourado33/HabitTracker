@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { makeNativeStackNavigatorFactory } from '../factories/navigator';
+
+const Stack = makeNativeStackNavigatorFactory();
 
 export const Router: React.FC<any> = () => {
   return (
-    <View>
-      <Text>Router component</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator></Stack.Navigator>
+    </NavigationContainer>
   );
 };
