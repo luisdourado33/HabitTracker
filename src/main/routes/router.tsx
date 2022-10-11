@@ -8,9 +8,11 @@ import { makeSplashScreen } from '../factories/pages';
 const Stack = makeNativeStackNavigatorFactory();
 
 export const Router: React.FC<any> = () => {
+  const navigatorOptions = { headerShown: false };
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={navigatorOptions}>
         <Stack.Screen name="SplashScreen" component={makeSplashScreen} />
       </Stack.Navigator>
     </NavigationContainer>
