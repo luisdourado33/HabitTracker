@@ -6,8 +6,7 @@ export interface IAuthentication {
 
 export namespace Authentication {
   export type Params = {
-    email: string;
-    password: string;
+    emailKey: string;
   };
 
   export type Model = AccountModel;
