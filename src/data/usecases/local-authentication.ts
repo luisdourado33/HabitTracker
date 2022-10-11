@@ -1,19 +1,13 @@
-import { AccountModel } from '@/domain/models';
 import { Authentication, IAuthentication } from '@/domain/usecases';
 import { LocalStorageClient } from '@/data/protocols/cache';
 
 export class LocalAuthentication implements IAuthentication {
   constructor(
-    private readonly localStorageClient: LocalStorageClient<AccountModel>,
+    private readonly localStorageClient: LocalStorageClient<string>,
   ) {}
 
-  async auth(
-    params: LocalAuthenticationNamespace.Params,
-  ): Promise<LocalAuthenticationNamespace.Model> {
-    const localResponse = await this.localStorageClient.request({
-      method: 'get',
-      key: params.emailKey,
-    });
+  async auth(params: LocalAuthenticationNamespace.Params): Promise<string> {
+    const localResponse = await this.localStorageClient.get(params.emailKey);
 
     return localResponse;
   }

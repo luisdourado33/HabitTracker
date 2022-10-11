@@ -1,7 +1,7 @@
 import { AccountModel } from '../models';
 
 export interface IAuthentication {
-  auth(params: Authentication.Params): Promise<Authentication.Model>;
+  auth(params: Authentication.Params): Promise<string>;
 }
 
 export namespace Authentication {

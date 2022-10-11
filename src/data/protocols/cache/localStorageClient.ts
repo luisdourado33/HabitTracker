@@ -1,11 +1,4 @@
-export type LocalStorageRequest = {
-  method: LocalStorageMethod;
-  key: string;
-  value?: any;
-};
-
 export interface LocalStorageClient<T = any> {
-  request(params: LocalStorageRequest): Promise<T>;
+  get(key: string): Promise<T>;
+  set(key: string, value: any): Promise<T>;
 }
-
-export type LocalStorageMethod = 'get' | 'set';
