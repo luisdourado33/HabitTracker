@@ -1,7 +1,7 @@
-import {Authentication} from '../../domain/usecases';
-import {LocalStorageClient} from '../protocols/cache';
+import { Authentication } from '../../domain/usecases';
+import { LocalStorageClient } from '../protocols/cache';
 
-import {EmptyValueError} from '../errors';
+import { EmptyValueError } from '../errors';
 
 export class LocalAuthentication implements Authentication {
   constructor(
