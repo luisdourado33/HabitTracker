@@ -2,6 +2,7 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
   "compilerOptions": {
+<<<<<<< HEAD
     "module": "esnext",
     "esModuleInterop": true,
     "jsx": "react",
@@ -15,5 +16,11 @@
     /* Completeness */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "isolatedModules": false
+=======
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Completeness */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+>>>>>>> ced8277c568615ab3005e5ae1135a81cc2faca56
   }
 }

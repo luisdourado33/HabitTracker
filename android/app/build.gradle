@@ -1,5 +1,8 @@
 apply plugin: "com.android.application"
+<<<<<<< HEAD
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+=======
+>>>>>>> ced8277c568615ab3005e5ae1135a81cc2faca56
 
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
@@ -141,7 +144,10 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+<<<<<<< HEAD
         multiDexEnabled true
+=======
+>>>>>>> ced8277c568615ab3005e5ae1135a81cc2faca56
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
