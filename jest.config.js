@@ -1,6 +1,9 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
-  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
+  roots: ['<rootDir>/src', '<rootDir>/'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{ts,tsx}',
+    '<rootDir>/**/*.{ts,tsx}',
+  ],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   transform: {
