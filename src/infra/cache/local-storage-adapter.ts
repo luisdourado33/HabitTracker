@@ -1,4 +1,4 @@
-import { LocalStorageClient } from '@/data/protocols/cache';
+import { LocalStorageClient } from '../../data/protocols/cache';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -6,7 +6,7 @@ export class LocalStorageAdapter implements LocalStorageClient {
   name = 'LocalStorageAdapter';
   async get(key: string): Promise<any> {
     const response = await AsyncStorage.getItem(key);
-    console.log(`[${this.name}] getting item from AsyncStorage`);
+    console.log(`[${this.name}] getting ${key} from AsyncStorage`);
 
     return response;
   }

@@ -6,10 +6,8 @@ export class LocalAuthentication implements IAuthentication {
     private readonly localStorageClient: LocalStorageClient<string>,
   ) {}
 
-  async auth(params: LocalAuthenticationNamespace.Params): Promise<string> {
-    const localResponse = await this.localStorageClient.get(params.emailKey);
-
-    return localResponse;
+  async auth(params: LocalAuthenticationNamespace.Params): Promise<void> {
+    await this.localStorageClient.set('current_user', params.emailKey);
   }
 }
 
