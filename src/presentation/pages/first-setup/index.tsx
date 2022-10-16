@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { HABITS } from './mocks';
+
 import { Container } from './styles';
 
 import Heading from '../../components/atoms/Heading';
@@ -7,11 +9,14 @@ import Paragraph from '../../components/atoms/Paragraph';
 import Grid from '../../components/molecules/Grid';
 import HabitCard from '../../components/molecules/HabitCard';
 
-const ITEMS = [1, 2, 3];
-
 const FirstSetup: React.FC<any> = () => {
-  const renderItems = ITEMS.map((item, key) => (
-    <HabitCard key={key}>Item</HabitCard>
+  const renderItems = HABITS.map((item, key) => (
+    <HabitCard
+      key={key}
+      title={item.title}
+      icon={item.title}
+      colorOnPress="orange"
+    />
   ));
 
   return (
