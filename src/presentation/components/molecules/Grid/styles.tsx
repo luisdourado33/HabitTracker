@@ -8,5 +8,4 @@ export const List = styled(View)`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  background-color: red;
 `;
