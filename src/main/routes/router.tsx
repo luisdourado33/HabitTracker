@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { StatusBar } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
 
 import { makeNativeStackNavigatorFactory } from '../factories/navigator';
@@ -15,14 +17,21 @@ export const Router: React.FC<any> = () => {
   };
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={navigatorOptions}>
-        <Stack.Screen
-          name="FirstSetupScreen"
-          component={makeFirstSetupScreen}
-        />
-        <Stack.Screen name="SplashScreen" component={makeSplashScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={navigatorOptions}>
+          <Stack.Screen
+            name="FirstSetupScreen"
+            component={makeFirstSetupScreen}
+          />
+          <Stack.Screen name="SplashScreen" component={makeSplashScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
