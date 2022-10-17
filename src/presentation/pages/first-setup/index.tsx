@@ -14,7 +14,7 @@ const FirstSetup: React.FC<any> = () => {
     <HabitCard
       key={key}
       title={item.title}
-      icon={item.title}
+      icon={item.icon}
       colorOnPress="orange"
     />
   ));
